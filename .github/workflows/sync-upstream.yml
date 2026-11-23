@@ -2,8 +2,8 @@ name: Sync fork with upstream
 
 on:
   schedule:
-    # GitHub cron is UTC. Runs every 30 minutes; schedule may be delayed under load.
-    - cron: "*/30 * * * *"
+    # GitHub cron is UTC. Hourly at :17 to avoid top-of-hour congestion.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
